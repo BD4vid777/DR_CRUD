@@ -183,7 +183,6 @@ function getAllFavCards() {
 
 function checkLocalStorage() {
     const localStorageCheck = JSON.parse(localStorage.getItem('fav-cards') || null)
-    console.log(localStorageCheck)
     if (localStorageCheck === null) {
         const defId = 99999
         const defMethod = "GET"

@@ -44,7 +44,6 @@ main {
 }
 
 .favourites-section {
-    width: fit-content;
     min-height: 500px;
     background-color: hsla(0, 0%, 100%, .7);
     border-radius: 5px;
@@ -123,11 +122,12 @@ main {
     .main-box {
         margin-top: 1rem;
         max-width: 400px;
-        padding: .5rem 1rem!important;
+        padding: .5rem 1rem 1rem 1rem!important;
     }
 
     nav {
-        font-size: smaller;
+        font-size: small;
+        flex-direction: column;
     }
 
     .crud-container {
@@ -151,5 +151,55 @@ main {
 
     main.is-flex.pl-5 {
         padding-left: 0!important;
+    }
+}
+
+@media (max-width: 425px) {
+    .main-box {
+        margin-top: 1rem;
+        max-width: 300px;
+        padding: .5rem 1rem 1rem 1rem!important;
+    }
+
+    .crud-container {
+        flex-direction: column;
+    }
+
+    .favourites-section {
+        order: 1;
+        margin-top: 1rem;
+        min-height: fit-content;
+        padding: .5rem .5rem!important;
+    }
+
+    .favourites-section p {
+        margin-bottom: 0!important;
+        font-size: 1rem!important;
+    }
+
+    .fav-cards {
+        padding: .5rem;
+        overflow-x: unset;
+    }
+
+    .header-title.is-size-7.has-text-info {
+        font-size: .75rem!important;
+    }
+
+    .card-header span.is-size-7 {
+        font-size: .75rem!important;
+        overflow-wrap: anywhere;
+    }
+
+    main.is-flex.pl-5 {
+        padding-left: 0!important;
+    }
+
+    #response-content, main form {
+        width: 268px;
+    }
+
+    .response-body {
+        min-width: unset;
     }
 }
