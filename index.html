@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js" type="module"></script>
+    <script defer src="https://kit.fontawesome.com/8c93a1d097.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg">
+    <title>PRE dr CRUD</title>
+</head>
+<body>
+    <section class="box section container p-3 main-box" style="min-width: 900px; ">
+        <nav class="navbar is-transparent mb-3">
+            <div class="navbar-brand">
+                <a href="" class="navbar-item image image has-ratio">
+                    <img src="CRUD_logo.png" alt="DR CRUD - Custom, Simple tool to test APIs" width="173" height="67" style="max-height: 3rem">
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item is-grouped">
+                        <a id="navAboutItem" class="navbar-item">About</a>
+                        <a href="#" class="navbar-item has-text-info">
+                            <span class="mr-2">Buy me a coffee</span>
+                            <span class="icon">
+                                <i class="fas fa-coffee"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+        <div class="container is-flex">
+            <section style="width: fit-content; min-height: 500px;" class="is-flex is-flex-direction-column is-justify-content-space-between card has-background-white py-5 px-3">
+                <p class="title is-5 has-text-info">Favourites</p>
+                <div class="fav-cards">
+
+                </div>
+                <form class="mt-5">
+                    <div class="field is-flex mb-1">
+                        <div class="select is-info is-small">
+                            <select data-method-fav>
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="PATCH">PATCH</option>
+                                <option value="DELETE">DELETE</option>
+                            </select>
+                        </div>
+                        <input type="url" class="input is-info is-small ml-1" placeholder="https://example.com" data-url-fav>
+                    </div>
+                    <div class="field is-flex">
+                        <input type="text" class="input is-info is-small mr-1" placeholder="Add description or leave blank" data-info-fav>
+                        <button type="submit" class="button is-info is-small" data-add-fav>Add new</button>
+                    </div>
+                </form>
+
+
+            </section>
+            <main class="is-flex is-flex-grow-1 is-justify-content-center px-5">
+                <div class="is-flex-direction-row" style="width: 100%">
+                    <form data-form>
+                        <div class="field is-flex mb-4">
+                            <div class="select is-info is-small">
+                                <select data-method>
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="PATCH">PATCH</option>
+                                    <option value="DELETE">DELETE</option>
+                                </select>
+                            </div>
+                            <input type="url" class="input is-info is-small mx-1" placeholder="https://example.com" required data-url>
+                            <button type="submit" class="button is-info is-small">Send</button>
+                        </div>
+
+                        <div class="tabs tabs-request is-small">
+                            <ul role="tablist">
+                                <li class="is-active" role="presentation">
+                                    <a
+                                            id="query-params-tab"
+                                            data-target="query-params"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="query-params"
+                                            aria-selected="true"
+                                    >Query Params</a>
+                                </li>
+                                <li role="presentation">
+                                    <a
+                                            id="request-headers-tab"
+                                            data-target="request-headers"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="request-headers"
+                                            aria-selected="false"
+                                    >Headers</a>
+                                </li>
+                                <li role="presentation">
+                                    <a
+                                            id="json-tab"
+                                            data-target="json"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="json"
+                                            aria-selected="false"
+                                    >JSON</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-0" id="tab-content">
+                            <div
+                                    id="query-params"
+                                    role="tabpanel"
+                                    aria-labelledby="query-params-tab"
+                            >
+                                <div data-query-params></div>
+                                <button data-add-query-param-btn class="button is-info is-small" type="button">Add</button>
+                            </div>
+                            <div
+                                    class="is-hidden"
+                                    id="request-headers"
+                                    role="tabpanel"
+                                    aria-labelledby="request-headers-tab"
+                            >
+                                <div data-request-headers></div>
+                                <button data-add-request-header-btn class="button is-info is-small" type="button">Add</button>
+                            </div>
+                            <div
+                                    class="is-hidden"
+                                    id="json"
+                                    role="tabpanel"
+                                    aria-labelledby="json-tab"
+                            >
+                                <div data-json-request-body class="response-body"></div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="is-hidden" data-response-section>
+                        <h3 class="has-text-weight-bold mt-2">Response</h3>
+                        <div class="is-flex  my-2">
+                            <div>
+                                Status: <span data-status></span>
+                            </div>
+                            <div class="mx-2">
+                                Time: <span data-time></span>ms
+                            </div>
+                            <div>
+                                Size: <span data-size></span>
+                            </div>
+                        </div>
+
+                        <div class="tabs-response tabs is-small">
+                            <ul role="tablist">
+                                <li class="is-active" role="presentation">
+                                    <a
+                                            id="body-tab"
+                                            data-target="body"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="body"
+                                            aria-selected="true"
+                                    >Body
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a
+                                            id="response-headers-tab"
+                                            data-target="response-headers"
+                                            type="button"
+                                            role="tab"
+                                            aria-controls="response-headers"
+                                            aria-selected="false"
+                                    >Headers
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="p-0" id="response-content">
+                            <div
+                                    id="body"
+                                    role="tabpanel"
+                                    aria-labelledby="body-tab"
+                            >
+                                <div data-json-response-body class="response-body"></div>
+                            </div>
+                            <div
+                                    class="is-hidden"
+                                    id="response-headers"
+                                    role="tabpanel"
+                                    aria-labelledby="response-headers-tab"
+                            >
+                                <div style="display: grid; grid-template-columns: auto 1fr; gap: .5rem 2rem;" data-response-headers></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+
+    <template data-key-value-template>
+        <div class="is-flex mb-1" data-key-value-pair>
+            <input type="text" data-key class="input is-info is-small" placeholder="Key" />
+            <input type="text" data-value class="input is-info is-small mx-1" placeholder="Value" />
+            <button type="button" data-remove-btn class="button is-danger is-small">Remove</button>
+        </div>
+    </template>
+
+</body>
+</html>

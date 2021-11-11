@@ -1,0 +1,92 @@
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(242, 242, 242, 0.6);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(62, 142, 208, .6);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(62, 142, 208, 1);
+}
+
+body {
+    display: grid;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    font-family: 'Rubik', sans-serif;}
+
+.is-small.input,
+.button.is-small:not(.is-rounded) {
+    border-radius: 4px;
+}
+
+main {
+    min-width: 300px;
+    overflow: hidden;
+}
+
+main form {
+    min-width: 400px;
+}
+
+.fav-cards {
+    overflow: auto;
+    height: 70%;
+    padding: 1.5rem;
+}
+
+.fav-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.fav-item {
+    cursor: pointer;
+}
+
+.fav-item:hover {
+    transform: scale(1.05);
+}
+
+.fav-item:hover p {
+    font-weight: 500;
+}
+
+.fav-item:hover .fa-times {
+    opacity: 1;
+}
+
+.icon {
+    height: unset;
+    width: unset;
+    margin-left: 5px;
+}
+
+.fa-times {
+    opacity: 0;
+    transform: scale(.8);
+    transition: opacity 350ms linear;
+}
+
+.fa-times:hover {
+    color: red;
+}
+
+
+.response-body {
+    max-height: 300px;
+    width: 500px;
+    min-width: 300px;
+    font-size: xx-small;
+    overflow-y: scroll;
+    border: 1px solid #F2F2F299;
+    border-radius: 5px;
+}
