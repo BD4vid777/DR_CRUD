@@ -13,35 +13,30 @@
     <title>PRE dr CRUD</title>
 </head>
 <body>
-    <section class="box section container p-3 main-box" style="min-width: 900px; ">
-        <nav class="navbar is-transparent mb-3">
-            <div class="navbar-brand">
-                <a href="" class="navbar-item image image has-ratio">
+    <section class="box section container py-3 px-5 main-box">
+        <nav class="mb-3 is-flex is-justify-content-space-between is-align-items-center">
+            <div>
+                <a href="#" class="image image has-ratio">
                     <img src="CRUD_logo.png" alt="DR CRUD - Custom, Simple tool to test APIs" width="173" height="67" style="max-height: 3rem">
                 </a>
             </div>
-            <div class="navbar-menu">
-                <div class="navbar-end">
-                    <div class="navbar-item is-grouped">
-                        <a id="navAboutItem" class="navbar-item">About</a>
-                        <a href="#" class="navbar-item has-text-info">
-                            <span class="mr-2">Buy me a coffee</span>
-                            <span class="icon">
-                                <i class="fas fa-coffee"></i>
-                            </span>
-                        </a>
-                    </div>
-
-                </div>
+            <div class="is-flex" style="gap: 1rem">
+                <a id="navAboutItem" class="has-text-info">About</a>
+                <a href="#" class="has-text-info">
+                    <span class="mr-2">Buy me a coffee</span>
+                    <span class="icon">
+                        <i class="fas fa-coffee"></i>
+                    </span>
+                </a>
             </div>
         </nav>
-        <div class="container is-flex">
-            <section style="width: fit-content; min-height: 500px;" class="is-flex is-flex-direction-column is-justify-content-space-between card has-background-white py-5 px-3">
+        <div class="container is-flex crud-container">
+            <section class="favourites-section is-flex is-flex-direction-column is-justify-content-space-between card py-5 px-3">
                 <p class="title is-5 has-text-info">Favourites</p>
                 <div class="fav-cards">
 
                 </div>
-                <form class="mt-5">
+                <form class="mt-2">
                     <div class="field is-flex mb-1">
                         <div class="select is-info is-small">
                             <select data-method-fav>
@@ -62,7 +57,7 @@
 
 
             </section>
-            <main class="is-flex is-flex-grow-1 is-justify-content-center px-5">
+            <main class="is-flex is-flex-grow-1 is-justify-content-center pl-5">
                 <div class="is-flex-direction-row" style="width: 100%">
                     <form data-form>
                         <div class="field is-flex mb-4">
@@ -143,8 +138,8 @@
                         </div>
                     </form>
                     <div class="is-hidden" data-response-section>
-                        <h3 class="has-text-weight-bold mt-2">Response</h3>
-                        <div class="is-flex  my-2">
+                        <h3 class="has-text-info title is-6 mt-4 mb-2">Response</h3>
+                        <div class="is-flex my-2 subtitle is-7">
                             <div>
                                 Status: <span data-status></span>
                             </div>
@@ -197,7 +192,7 @@
                                     role="tabpanel"
                                     aria-labelledby="response-headers-tab"
                             >
-                                <div style="display: grid; grid-template-columns: auto 1fr; gap: .5rem 2rem;" data-response-headers></div>
+                                <div class="response-headers p-2 is-small" data-response-headers></div>
                             </div>
                         </div>
                     </div>

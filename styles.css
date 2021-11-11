@@ -20,8 +20,12 @@
 body {
     display: grid;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    width: 100vw;
+    height: 100vh;
+    background-color: #e6e6e6;
+    background-image: url("img/BG_keyboard.jpg");
+    background-size: cover;
+    background-position: center;
     font-family: 'Rubik', sans-serif;}
 
 .is-small.input,
@@ -29,13 +33,21 @@ body {
     border-radius: 4px;
 }
 
+.box {
+    background-color: hsla(0, 0%, 100%, .9);
+    color: #000000;
+}
+
 main {
     min-width: 300px;
     overflow: hidden;
 }
 
-main form {
-    min-width: 400px;
+.favourites-section {
+    width: fit-content;
+    min-height: 500px;
+    background-color: hsla(0, 0%, 100%, .7);
+    border-radius: 5px;
 }
 
 .fav-cards {
@@ -83,10 +95,61 @@ main form {
 
 .response-body {
     max-height: 300px;
-    width: 500px;
     min-width: 300px;
     font-size: xx-small;
     overflow-y: scroll;
     border: 1px solid #F2F2F299;
     border-radius: 5px;
+}
+#json,
+#response-content,
+#response-headers {
+    background-color: hsla(0, 0%, 100%, .5);
+    border-radius: 5px;
+}
+
+#response-headers {
+    font-size: x-small;
+    text-transform: capitalize;
+}
+
+.response-headers {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5rem 2rem;
+}
+
+@media (max-width: 1000px) {
+    .main-box {
+        margin-top: 1rem;
+        max-width: 400px;
+        padding: .5rem 1rem!important;
+    }
+
+    nav {
+        font-size: smaller;
+    }
+
+    .crud-container {
+        flex-direction: column;
+    }
+
+    .favourites-section {
+        order: 1;
+        margin-top: 1rem;
+        min-height: fit-content;
+        padding: .5rem 1rem!important;
+    }
+
+    .favourites-section p {
+        margin-bottom: 0!important;
+    }
+
+    .fav-cards {
+        padding: .5rem;
+    }
+
+    main.is-flex.pl-5 {
+        padding-left: 0!important;
+    }
 }
