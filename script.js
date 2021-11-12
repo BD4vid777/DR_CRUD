@@ -108,6 +108,48 @@ function keyValuePairsToObjects(container) {
     }, {})
 }
 
+// MODAL
+
+const aboutBtn = document.querySelector('#navAboutItem')
+const modal = document.querySelector('.modal')
+const modalBg = document.querySelector('.modal-background')
+const modalClose = document.querySelector('.modal-close')
+
+aboutBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    modal.classList.add('is-active')
+})
+
+modalBg.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active')
+})
+
+modalClose.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.classList.remove('is-active')
+})
+
+const authorBtn = document.querySelector('#authorBtn')
+const projectBtn = document.querySelector('#projectBtn')
+const modalSlider = document.querySelector('.modalSlider')
+const aboutProject = document.querySelector('.aboutProject')
+const aboutAuthor = document.querySelector('.aboutAuthor')
+
+projectBtn.onclick = function () {
+    modalSlider.classList.add('activeSlide')
+    aboutProject.classList.add('activeSlide')
+    aboutAuthor.classList.add('activeSlide')
+}
+
+authorBtn.onclick = function () {
+    modalSlider.classList.remove('activeSlide')
+    aboutProject.classList.remove('activeSlide')
+    aboutAuthor.classList.remove('activeSlide')
+}
+
+
+
 // tabs
 
 const tabs = document.querySelectorAll('.tabs-request li');
@@ -162,7 +204,11 @@ _refreshFavCards()
 checkLocalStorage()
 
 const apiFavUrl = document.querySelector('[data-url-fav]')
-apiFavUrl.addEventListener('click', () => apiFavUrl.value = "https://")
+apiFavUrl.addEventListener('click', () => {
+    if (apiFavUrl.value === '') {
+        apiFavUrl.value = "https://"
+    }
+})
 
 const addFavButton = document.querySelector('[data-add-fav]')
 addFavButton.addEventListener('click', (e) => {

@@ -24,7 +24,7 @@
     <title>dr CRUD - Micro API Platform</title>
 </head>
 <body>
-    <section class="box section container py-3 px-5 main-box">
+    <section class="box section container pt-3 px-5 pb-5 main-box">
         <nav class="mb-3 is-flex is-justify-content-space-between is-align-items-center">
             <div>
                 <a href="/" class="image image has-ratio">
@@ -41,7 +41,7 @@
                 </a>
             </div>
         </nav>
-        <div class="container is-flex crud-container">
+        <div class="container is-flex crud-container p-1">
             <section class="favourites-section is-flex is-flex-direction-column is-justify-content-space-between card py-5 px-3">
                 <p class="title is-5 has-text-info">Favourites</p>
                 <div class="fav-cards">
@@ -212,6 +212,36 @@
         </div>
     </section>
 
+<!-- Modal Section -->
+
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card box ml-2 mr-2 modal-container">
+            <div class="modalContent has-background-info">
+                <div class="box-container aboutProject">
+                    <h2 class="has-text-white">Dr CRUD</h2>
+                    <p class="has-text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, necessitatibus.</p>
+                    <button type="button" class="button is-light is-small" id="authorBtn">About Author</button>
+                </div>
+                <div class="box-container aboutAuthor">
+                    <h2 class="has-text-white">Dawid Budziński</h2>
+                    <p class="has-text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae est maxime nemo? Dolorem eveniet, molestias!</p>
+                    <button type="button" class="button is-light is-small" id="projectBtn">About Project</button>
+                </div>
+            </div>
+            <div class="modalSlider">
+                <div class="projectTitle">
+                    <img src="CRUD_logo.png" alt="Dr Crud - API Platform">
+                </div>
+                <div class="authorTitle">
+                    <img src="img/db_foto.png" alt="Dawid Budziński - Code: Archer">
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+<!-- Template for key-value pair -->
 
     <template data-key-value-template>
         <div class="is-flex mb-1" data-key-value-pair>
