@@ -160,10 +160,18 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: .5rem;
+    padding: 1.5rem .75rem;
+}
+
+.modalContent .box-container h2 {
+    height: 5%;
+}
+
+.modalContent .box-container .main-content {
+    height: 75%;
 }
 
 .modalSlider {
@@ -173,13 +181,13 @@ main {
     width: 50%;
     height: 100%;
     z-index: 1000;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     transition: 350ms ease-in-out;
     overflow: hidden;
+    background: white;
 }
 
 
@@ -188,7 +196,7 @@ main {
 }
 
 .modalSlider img {
-    max-height: 200px;
+    max-height: 260px;
     border-radius: 100%;
 }
 
@@ -239,6 +247,106 @@ main {
 
 .aboutAuthor.activeSlide {
     opacity: 0;
+}
+
+#projectBtn {
+    margin-right: auto;
+    transition: 350ms ease-in-out;
+    overflow: hidden;
+}
+
+#projectBtn:hover .btnArrow-left {
+    left: -5px;
+    position: relative;
+}
+
+#authorBtn {
+    margin-left: auto;
+    transition: 350ms ease-in-out;
+    overflow: hidden;
+}
+
+#authorBtn:hover .btnArrow-right {
+    right: -5px;
+    position: relative;
+}
+
+.btnArrow {
+    height: 20px;
+}
+
+.btnArrow-left {
+    margin-right: 10px;
+    position: absolute;
+    left: -30px;
+    transition: 350ms ease-in-out;
+}
+
+.btnArrow-right {
+    margin-left: 10px;
+    position: absolute;
+    right: -30px;
+    transition: 350ms ease-in-out;
+}
+
+.code-usage {
+    background: white;
+    height: 66px;
+    width: 66px;
+    border-radius: 100%;
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.code-usage img {
+    height: 33px;
+    margin: 0 auto;
+}
+
+.code-usage svg {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 60px;
+    width: 60px;
+}
+
+.text-percentage {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+}
+
+.code-usage circle[class] {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    transition: 1500ms ease-in-out;
+}
+
+.js-circle {
+    stroke: #D4B830;
+}
+
+.js-html {
+    stroke: #E34F26;
+}
+
+.js-css {
+    stroke: #1572B6;
+}
+
+.aboutProject.activeSlide .js-circle {
+    stroke-dashoffset: 392;
+}
+
+.aboutProject.activeSlide .js-html {
+    stroke-dashoffset: 384;
+}
+
+.aboutProject.activeSlide .js-css {
+    stroke-dashoffset: 452;
 }
 
 
