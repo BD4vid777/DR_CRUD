@@ -388,7 +388,7 @@ main {
 
 @media (max-width: 700px) {
     .modal-container {
-        height: 600px;
+        height: 800px;
         width: 300px;
     }
 
