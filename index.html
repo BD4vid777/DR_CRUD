@@ -32,8 +32,8 @@
                 </a>
             </div>
             <div class="is-flex" style="gap: 1rem">
-                <a href="/" id="navAboutItem" class="has-text-info">About</a>
-                <a href="/" class="has-text-info">
+                <div id="navAboutItem" class="has-text-info">About Author/Project</div>
+                <a href="/" class="has-text-info" style="display: none">
                     <span class="mr-2">Buy me a coffee</span>
                     <span class="icon">
                         <i class="fas fa-coffee"></i>
@@ -69,9 +69,9 @@
 
             </section>
             <main class="is-flex is-flex-grow-1 is-justify-content-center pl-5">
-                <div class="is-flex-direction-row" style="width: 100%">
+                <div class="is-flex-direction-row" style="width: 100%; padding-top: 1px">
                     <form data-form>
-                        <div class="field is-flex mb-4">
+                        <div class="field is-flex mb-3">
                             <div class="select is-info is-small">
                                 <select data-method>
                                     <option value="GET">GET</option>
@@ -259,9 +259,42 @@
                 <div class="box-container aboutAuthor">
                     <h2 class="has-text-white subtitle is-uppercase">Dawid Budziński</h2>
                     <div class="main-content">
-                        <p class="has-text-white">Beatae est maxime nemo? Dolorem eveniet, molestias!</p>
+                        <p class="has-text-white is-size-7">Front-end Developer</p>
+                        <fieldset>
+                            <legend>Who I am</legend>
+                            <p>After 13 years in advertising I decided to flip my professional career.
+                                I’ve always been interested in new technologies, so I become a web developer with focus on Front-end development.</p>
+                        </fieldset>
+                        <div class="skills">
+                            <h3 class="has-text-white is-size-7 is-left mb-2 ">Skills</h3>
+                            <img src="img/SKILLS.svg" alt="My developer skills">
+                        </div>
                     </div>
-                    <button type="button" class="button is-light is-small" id="projectBtn"><img class="btnArrow btnArrow-left" src="https://img.icons8.com/fluency-systems-regular/48/000000/circled-left-2.png" alt="Back Arrow by Icons8"/>About Project</button>
+                    <div class="is-flex is-justify-content-space-between is-align-items-center" style="width: 100%">
+                        <button type="button" class="button is-light is-small" id="projectBtn"><img class="btnArrow btnArrow-left" src="https://img.icons8.com/fluency-systems-regular/48/000000/circled-left-2.png" alt="Back Arrow by Icons8"/>About Project</button>
+                        <div class="contact-buttons is-flex">
+                            <a class="floating-btn">
+                                <i class="fas fa-paperclip"></i>
+                            </a>
+                            <div class="floating-container">
+                                <a href="mailto: dawidbudzinski@gmail.com?subject=Mail from DrCRUD" title="Any Suggestions or feedback?">
+                                    <i class="fas fa-envelope-square"></i>
+                                </a>
+                                <a href="https://github.com/BD4vid777" title="Check my Github account" target="_blank">
+                                    <i class="fab fa-github-square"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/dawid-b-bb8b9430/" title="Contact me via Linkedin" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <button class="btnScheme-dark" disabled title="Dark/Light in progress">
+                                    <i class="fas fa-lightbulb"></i>
+                                </button>
+                                <button class="btnScheme-light" disabled title="Dark/Light in progress" style="display: none">
+                                    <i class="far fa-lightbulb"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modalSlider">
