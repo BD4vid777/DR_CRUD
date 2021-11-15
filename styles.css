@@ -351,11 +351,11 @@ li.is-active a {
 }
 
 .aboutProject.activeSlide .js-circle {
-    stroke-dashoffset: 392;
+    stroke-dashoffset: 412;
 }
 
 .aboutProject.activeSlide .js-html {
-    stroke-dashoffset: 384;
+    stroke-dashoffset: 391;
 }
 
 .aboutProject.activeSlide .js-css {
