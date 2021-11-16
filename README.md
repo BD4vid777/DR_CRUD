@@ -8,6 +8,7 @@ If You need clone project and customize it as you like.
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/BD4vid777/DR_CRUD)
 ![GitHub language count](https://img.shields.io/github/languages/count/BD4vid777/DR_CRUD)
 ![GitHub package.json dynamic](https://img.shields.io/github/package-json/keywords/BD4vid777/DR_CRUD)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2686ea4d-aede-42c8-a610-6d1a83ce84f5/deploy-status)](https://app.netlify.com/sites/agitated-jang-c98e6f/deploys)
 
 ## SneakPeak
 
